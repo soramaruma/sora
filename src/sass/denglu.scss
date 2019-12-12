@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.nav{
+    width: 100%;
+    height: 35px;
+    background: rgb(242, 242, 242);
+    div{
+        width: 1200px;
+        height: 35px;
+        margin: 0 auto;
+        ul{
+            list-style: none;
+            height: 35px;
+            line-height: 35px;
+            font-size: 12px;
+            float: left;
+            margin-left: 5px;
+            li{
+                float: left;
+                margin-right: 5px;
+                a{
+                    text-decoration: none;
+                    color: #7300ab;
+                    display: block;
+                    float: right;
+                }
+            }
+        }
+        ol{
+            list-style: none;
+            height: 35px;
+            line-height: 35px;
+            font-size: 12px;
+            float: right;
+            li{
+                float: left;
+                margin-right: 5px;
+                a{
+                    text-decoration: none;
+                    color: #000;
+                    &:hover{
+                        color: #f42f2f;
+                    }
+                }
+                .phonenumber{
+                    color: #7300ab;
+                }
+            }
+        }
+    }
+}
+.head{
+    width: 100%;
+    height: 80px;
+    margin: 20px 0 10px 0;
+    div{
+        width: 1200px;
+        height: 80px;
+        margin: 0 auto;
+        overflow: hidden;
+        .head-left{
+            // width: 600px;
+            height: 80px;
+            float: left;
+            img{
+                width: 185px;
+                height: 80px;
+                display: block;
+                float: left;
+            }
+            h2{
+                float: left;
+                font-weight: normal;
+                margin-top: 30px;
+                margin-left: 30px;
+            }
+        }
+    }
+}
+.banner{
+    width: 100%;
+    height: 562px;
+    background: url(../img/bgimg.png) no-repeat;
+    div{
+        position: relative;
+        width: 320px;
+        margin: 0 auto;
+        clear: both;
+        line-height: 24px;
+        font: 14px;
+        .login-box{
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 30px 20px;
+            width: 320px;
+            position: absolute;
+            right: 0;
+            top: 100px;
+            left: 450px;
+            h1{
+                color: #8b898a;
+                text-align: center;
+                font-size: 28px;
+                margin: 0 0 20px;
+            }
+            form{
+                div{
+                    position: relative;
+                    margin-bottom: 20px;
+                    input{
+                        box-sizing: border-box;
+                        width: 320px;
+                        height: 38px;
+                    }
+                }
+                .sub{
+                    input{
+                        background-color: #f42f2f;
+                        opacity: .5;
+                        border: none;
+                        color: white;
+                    }
+                }
+            }
+            span{
+                width: 320px;
+                height: 20x;
+                text-align: center;
+                float: left;
+                a{
+                    color: #8b898a;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>主页</title>
+    <link rel="stylesheet" href="./css/swiper.min.css">
+    <link rel="stylesheet" href="./css/xiangqing.css">
+</head>
+<body>
+    <div class="nav">
+        <div>
+            <ul>
+                <li>紫一商城欢迎您!</li>
+                <li><img src="./img/phone.png"><a href="#">扫码关注公众号</a></li>
+            </ul>
+            <ol>
+                <li><a href="denglu.html">登录</a></li>
+                <li><a href="#">我的订单</a></li>
+                <li><a href="#">客服热线:</a></li>
+                <li><a class="phonenumber" href="#">400-189-1399</a></li>
+            </ol>
+        </div>
+    </div>
+    <div class="head">
+        <div>
+            <div class="head-left">
+                <a href="index.html"><img src="./img/logo.png"></a>
+            </div>
+            <div class="head-center">
+                <form action="">
+                    <input class="text" type="text" placeholder="请输入搜索关键字">
+                    <input class="btn" type="button" >
+                </form>
+                <ol class="text-ol">
+
+                </ol>
+                <ul>
+                    <li><a class="red" href="#">酵素</a></li>
+                    <li><a href="#">牡蛎</a></li>
+                    <li><a class="red" href="#">蔓越莓</a></li>
+                    <li><a href="#">减肥奶昔</a></li>
+                    <li><a href="#">维骨力</a></li>
+                    <li class="noborder"><a href="#">月见草</a></li>
+                </ul>
+            </div>
+            <div class="head-right">
+                <a href="gwc.html"></a>
+            </div>
+        </div>
+    </div>
+    <div class="xq">
+        <div>
+            <div class="bigimg">
+                <img src="./img/20180925170046GuEsmtSq.jpg">
+                <div class="mask">
+                </div>
+            </div>
+            <div class="fdj">
+                <img class="fdjimg" src="./img/20180925170046GuEsmtSq.jpg">
+            </div>
+            <div class="good">
+                <p>中国&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">滋补品</a></p>
+                <h1>五宝茶 人参玛咖黄精桑葚男人养生茶 216g*盒</h1>
+                <div class="info">
+                    <div class="line">
+                        <span class="span1">售价:</span>
+                        <span class="span2">￥69.00</span>
+                        <span class="span3">包邮</span>
+                        <span class="span4">货到付款</span>
+                        <span class="span5">参考价:￥99.00</span>
+                    </div>
+                    <div class="tag">
+                        <p class="p1">促销:</p>
+                        <p class="p2">买2减20元s</p>
+                    </div>
+                    <div class="tag1">
+                        <span class="sp1">评价:</span>
+                        <span class="sp2">★★★★★  95.62%</span>
+                    </div>
+                    <div class="tag2">
+                        <p class="ap1">数量:</p>
+                        <span class="shop">
+                            <a href="#" class="a1">-</a>
+                            <span class="sn1">1</span>
+                            <a href="#" class="a2">+</a>
+                        </span>
+                    </div>
+                    <div class="buy">
+                        <a href="#"><span class="goumai">立即购买</span></a>
+                        <a id="mai"><span class="bumai">加入购物车</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./js/public.js"></script>
+<script src="./js/gwc.js"></script>
+<script>
+    window.onload = function(){
+        var small = document.getElementsByClassName('bigimg')[0];//小盒子
+        var mask = document.getElementsByClassName('mask')[0];//遮罩层
+        var big = document.getElementsByClassName('fdj')[0];//大盒子
+        var bigImg = document.getElementsByClassName('fdjimg')[0];//大盒子中的图片
+        //1 鼠标移入small盒子,mask盒子和big盒子显示
+        small.onmouseenter = function(){
+            mask.style.display = "block";
+            big.style.display = "block";
+        }
+        //2 鼠标移出small盒子,mask盒子和big盒子隐藏
+        small.onmouseleave = function(){
+            mask.style.display = "none";
+            big.style.display = "none";
+        }
+        //3 鼠标在small盒子中移动,mask跟着鼠标移动,并且鼠标位于mask中间
+        small.onmousemove = function(e){
+            var event = window.event || e;
+            //计算鼠标在small中的位置 
+            var pageX = event.clientX + scroll().left;
+            var pageY = event.clientY + scroll().top;
+            var x = pageX - small.offsetLeft - mask.offsetWidth/2;
+            //为了让鼠标在mask中间,x要减去mask盒子的一半宽度
+            var y = pageY - small.offsetTop - mask.offsetHeight/2;
+            //为了让鼠标在mask中间,y要减去mask盒子的一半高度
+
+            //4 mask不能超出small
+            var maxX = small.offsetWidth - mask.offsetWidth;
+            var maxY = small.offsetHeight - mask.offsetHeight;
+            if(x<0){
+                x = 0;
+            }
+            if(y<0){
+                y = 0;
+            }
+            if(x>maxX){
+                x = maxX;
+            }
+            if(y>maxY){
+                y = maxY;
+            }
+            //mask要定位
+            mask.style.left = x+"px";
+            mask.style.top = y + "px";
+            //5 鼠标在small盒子中移动时,big中的图片会显示相应部分
+            //x/small盒子的宽度 = 大图水平移动的距离/大图的宽度
+            //y/small盒子的高度 = 大图垂直移动的距离/大图的高度
+            bigImg.style.marginLeft = -x/small.offsetWidth*bigImg.offsetWidth + "px";
+            bigImg.style.marginTop = -y/small.offsetHeight*bigImg.offsetHeight + "px";
+        }
+    }
+</script>

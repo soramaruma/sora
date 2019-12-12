@@ -1,0 +1,519 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+.nav {
+  width: 100%;
+  height: 35px;
+  background: #f2f2f2; }
+  .nav div {
+    width: 1200px;
+    height: 35px;
+    margin: 0 auto; }
+    .nav div ul {
+      list-style: none;
+      height: 35px;
+      line-height: 35px;
+      font-size: 12px;
+      float: left;
+      margin-left: 5px; }
+      .nav div ul li {
+        float: left;
+        margin-right: 5px; }
+        .nav div ul li a {
+          text-decoration: none;
+          color: #7300ab;
+          display: block;
+          float: right; }
+    .nav div ol {
+      list-style: none;
+      height: 35px;
+      line-height: 35px;
+      font-size: 12px;
+      float: right; }
+      .nav div ol li {
+        float: left;
+        margin-right: 5px; }
+        .nav div ol li a {
+          text-decoration: none;
+          color: #000; }
+          .nav div ol li a:hover {
+            color: #f42f2f; }
+        .nav div ol li .phonenumber {
+          color: #7300ab; }
+
+.head {
+  width: 100%;
+  height: 80px;
+  margin: 20px 0 10px 0; }
+  .head div {
+    width: 1200px;
+    height: 80px;
+    margin: 0 auto;
+    overflow: hidden; }
+    .head div .head-left {
+      width: 185px;
+      height: 80px;
+      float: left; }
+      .head div .head-left img {
+        width: 185px;
+        height: 80px;
+        display: block; }
+    .head div .head-center {
+      width: 600px;
+      height: 80px;
+      background: white;
+      float: left;
+      margin-left: 300px; }
+      .head div .head-center form {
+        padding-left: 112px;
+        margin-top: 20px;
+        box-sizing: border-box;
+        width: 570px;
+        height: 38px; }
+        .head div .head-center form .text {
+          width: 400px;
+          height: 34px;
+          display: block;
+          float: left;
+          outline: none; }
+        .head div .head-center form .btn {
+          width: 54px;
+          height: 38px;
+          background: url(../img/shousuo.png) no-repeat;
+          border-style: none;
+          display: block;
+          float: left; }
+      .head div .head-center .text-ol {
+        width: 400px;
+        list-style: none;
+        position: absolute;
+        z-index: 999;
+        background: #eee;
+        left: 757px;
+        box-sizing: border-box;
+        display: none; }
+        .head div .head-center .text-ol li {
+          height: 30px;
+          line-height: 30px;
+          width: 100%; }
+      .head div .head-center ul {
+        box-sizing: border-box;
+        width: 480px;
+        list-style: none;
+        float: right;
+        font-size: 12px; }
+        .head div .head-center ul li {
+          text-align: center;
+          width: 60px;
+          border-right: 1px solid #999;
+          float: left;
+          font-size: 12px; }
+          .head div .head-center ul li a {
+            text-decoration: none;
+            color: #999; }
+            .head div .head-center ul li a:hover {
+              color: #f42f2f; }
+          .head div .head-center ul li .red {
+            color: #f42f2f; }
+        .head div .head-center ul .noborder {
+          border: none; }
+    .head div .head-right {
+      width: 90px;
+      height: 38px;
+      float: right;
+      margin-top: 20px;
+      margin-right: 24px;
+      background: url(../img/shopcar.png) no-repeat; }
+      .head div .head-right a {
+        width: 90px;
+        height: 38px;
+        display: block; }
+
+.wrap {
+  width: 100%;
+  height: 40px;
+  box-sizing: border-box;
+  border-bottom: 2px solid #7300ab; }
+  .wrap div {
+    margin: 0 auto;
+    width: 1200px;
+    height: 38px; }
+    .wrap div .nav-left {
+      float: left;
+      width: 190px;
+      height: 38px; }
+      .wrap div .nav-left img {
+        display: block;
+        float: left; }
+      .wrap div .nav-left a {
+        float: left;
+        color: #fff;
+        width: 150px;
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        height: 38px;
+        line-height: 38px;
+        font-size: 14px;
+        background: #7300ab; }
+    .wrap div ul {
+      list-style: none;
+      width: 400px;
+      height: 38px;
+      float: left; }
+      .wrap div ul li {
+        width: 100px;
+        height: 38px;
+        float: left;
+        position: relative; }
+        .wrap div ul li a {
+          display: block;
+          width: 100px;
+          height: 38px;
+          line-height: 38px;
+          text-decoration: none;
+          color: #000;
+          font-weight: bold;
+          font-size: 14px;
+          text-align: center; }
+          .wrap div ul li a:hover {
+            color: #f42f2f; }
+        .wrap div ul li .hot {
+          position: absolute;
+          top: -17px;
+          left: 21px; }
+    .wrap div .nav-fix {
+      width: 190px;
+      height: 450px;
+      position: absolute;
+      background: #7300ab;
+      z-index: 9999;
+      top: 185px;
+      opacity: 0.8;
+      list-style: none; }
+      .wrap div .nav-fix li {
+        color: #fff;
+        height: 90px;
+        padding: 10px 9px;
+        box-sizing: border-box;
+        border-bottom: 1px solid #b253c3; }
+        .wrap div .nav-fix li:hover {
+          background: white;
+          color: black; }
+        .wrap div .nav-fix li h2 {
+          font-size: 16px;
+          font-weight: normal; }
+        .wrap div .nav-fix li p {
+          font-size: 12px;
+          line-height: 20px;
+          margin-top: 5px; }
+
+.swiper-container {
+  width: 100%;
+  height: 450px; }
+
+.index-title {
+  width: 100%;
+  height: 28px;
+  margin: 35px 0 10px 0; }
+  .index-title div {
+    margin: 0 auto;
+    width: 1200px;
+    height: 28px; }
+    .index-title div h2 {
+      font-size: 22px;
+      float: left;
+      line-height: 28px; }
+    .index-title div span {
+      float: left;
+      font-size: 14px;
+      padding-left: 20px;
+      line-height: 28px; }
+    .index-title div a {
+      float: right;
+      display: block;
+      font-size: 14px;
+      color: #817d7d;
+      text-decoration: none;
+      line-height: 28px; }
+      .index-title div a:hover {
+        color: #f42f2f; }
+    .index-title div ul {
+      width: 500px;
+      height: 28px;
+      list-style: none;
+      color: #999;
+      float: left; }
+      .index-title div ul li {
+        text-align: center;
+        float: left;
+        width: 70px;
+        line-height: 28px; }
+        .index-title div ul li a {
+          display: block;
+          width: 70px;
+          height: 28px;
+          line-height: 28px;
+          text-align: center;
+          color: #f42f2f; }
+          .index-title div ul li a:hover {
+            color: #f42f2f; }
+        .index-title div ul li .aa {
+          color: #333; }
+
+.chanping {
+  width: 100%;
+  height: 500px;
+  box-sizing: border-box;
+  border-top: 1px solid black; }
+  .chanping div {
+    margin: 0 auto;
+    width: 1200px;
+    height: 500px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #eee; }
+    .chanping div .box-left {
+      width: 260px;
+      height: 500px;
+      float: left; }
+    .chanping div .left2 {
+      position: relative; }
+      .chanping div .left2 ul {
+        position: absolute;
+        width: 224px;
+        left: 28px;
+        top: 28px;
+        list-style: none; }
+        .chanping div .left2 ul li {
+          width: 58px;
+          height: 58px;
+          float: left;
+          margin: 0 14px 14px 0; }
+          .chanping div .left2 ul li a {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 58px;
+            text-align: center;
+            overflow: hidden;
+            font-size: 12px;
+            color: #333;
+            border-radius: 50%;
+            background: #fff; }
+            .chanping div .left2 ul li a:hover {
+              color: #f42f2f; }
+    .chanping div .box-center {
+      width: 676px;
+      height: 500px;
+      float: left; }
+      .chanping div .box-center ul {
+        width: 676px;
+        height: 500px;
+        list-style: none; }
+        .chanping div .box-center ul li {
+          width: 337px;
+          height: 249px;
+          float: left;
+          border-right: 1px solid #eee;
+          border-bottom: 1px solid #eee;
+          text-align: center; }
+          .chanping div .box-center ul li a {
+            display: block;
+            box-sizing: border-box;
+            padding: 10px 0;
+            color: #333;
+            text-decoration: none; }
+            .chanping div .box-center ul li a:hover {
+              color: #f42f2f;
+              opacity: 0.8; }
+            .chanping div .box-center ul li a h3 {
+              font-size: 16px;
+              font-weight: bold;
+              line-height: 22px;
+              margin: 5px 10px;
+              text-overflow: ellipsis;
+              overflow: hidden;
+              white-space: nowrap; }
+            .chanping div .box-center ul li a p {
+              margin: 5px 10px 0; }
+              .chanping div .box-center ul li a p strong {
+                color: #f42f2f;
+                font-size: 18px;
+                font-weight: normal; }
+              .chanping div .box-center ul li a p span {
+                color: #999;
+                text-decoration: line-through;
+                margin-left: 12px; }
+            .chanping div .box-center ul li a img {
+              width: 180px;
+              height: 180px;
+              border: none; }
+        .chanping div .box-center ul .li2 {
+          border-right: none; }
+        .chanping div .box-center ul .li3 {
+          border-bottom: none; }
+        .chanping div .box-center ul .li4 {
+          border: none; }
+    .chanping div .box-right {
+      width: 264px;
+      height: 500px;
+      float: left;
+      overflow: hidden;
+      padding: 0 20px; }
+      .chanping div .box-right h4 {
+        font-size: 16px;
+        line-height: 40px;
+        padding: 10px 0 0;
+        font-weight: bold; }
+      .chanping div .box-right ul {
+        list-style: none;
+        width: 224px;
+        height: 460px; }
+        .chanping div .box-right ul li {
+          width: 224px;
+          height: 95px;
+          margin: 5px 0 14px;
+          border-bottom: 1px dotted #eaeaea; }
+          .chanping div .box-right ul li a {
+            text-decoration: none;
+            color: #333; }
+            .chanping div .box-right ul li a:hover {
+              color: #f42f2f; }
+            .chanping div .box-right ul li a img {
+              float: left;
+              width: 75px;
+              height: 75px;
+              margin: 0 10px 0 0;
+              border: none; }
+            .chanping div .box-right ul li a div h3 {
+              width: 150px;
+              font-weight: normal;
+              font-size: 12px;
+              height: 36px;
+              text-overflow: ellipsis;
+              overflow: hidden;
+              white-space: nowrap;
+              line-height: 18px; }
+            .chanping div .box-right ul li a div div {
+              width: 224px;
+              height: auto;
+              padding: 5px 0 14px;
+              margin: 5px 0 14px;
+              border: none; }
+              .chanping div .box-right ul li a div div strong {
+                font-size: 14px;
+                color: #f42f2f; }
+              .chanping div .box-right ul li a div div span {
+                float: right; }
+
+.index-center {
+  width: 100%;
+  height: 405px; }
+  .index-center div {
+    width: 1200px;
+    height: 405px;
+    margin: 0 auto;
+    box-sizing: border-box; }
+    .index-center div .index-banner {
+      width: 1200px;
+      height: 405px;
+      list-style: none;
+      display: flex;
+      border-top: 1px solid #333;
+      box-sizing: border-box; }
+      .index-center div .index-banner li {
+        font-size: 14px;
+        flex: 1;
+        text-align: center;
+        border: 1px solid #eaeaea;
+        border-top: 0 none;
+        border-right: 0 none;
+        padding-bottom: 20px;
+        float: left;
+        box-sizing: border-box; }
+        .index-center div .index-banner li a {
+          color: #333;
+          text-decoration: none; }
+          .index-center div .index-banner li a:hover {
+            color: #f42f2f; }
+          .index-center div .index-banner li a div {
+            width: 299px;
+            height: 299px;
+            position: relative;
+            margin-bottom: 45px; }
+            .index-center div .index-banner li a div img {
+              width: 299px;
+              height: 299px;
+              border: none; }
+            .index-center div .index-banner li a div .banner-logo {
+              width: 80px;
+              height: 80px;
+              position: absolute;
+              top: 260px;
+              left: 50%;
+              margin-left: -40px; }
+          .index-center div .index-banner li a h3 {
+            font-weight: bold; }
+      .index-center div .index-banner .Lborder {
+        border-right: 1px solid #eaeaea; }
+
+.encyclopedia {
+  width: 100%;
+  height: 300px;
+  background: #f42f2f; }
+  .encyclopedia div {
+    width: 1200px;
+    height: 300px;
+    margin: 0 auto; }
+    .encyclopedia div dl {
+      width: 390px;
+      height: 90px;
+      float: left;
+      margin: 5px;
+      background: yellow; }
+
+.lianjie {
+  width: 100%;
+  height: 134px;
+  background: yellowgreen;
+  margin-top: 20px; }
+  .lianjie div {
+    width: 1200px;
+    height: 134px;
+    margin: 0 auto;
+    background: grey; }
+    .lianjie div .div-top {
+      width: 1200px;
+      height: 40px;
+      background: hotpink; }
+    .lianjie div .div-bottom {
+      width: 1200px;
+      height: 94px;
+      background: indigo; }
+
+.bottom {
+  margin-top: 40px;
+  width: 100%;
+  height: 412px;
+  background: lawngreen; }
+  .bottom div {
+    width: 1200px;
+    height: 412px;
+    margin: 0 auto;
+    background: lemonchiffon; }
+    .bottom div .pret01 {
+      width: 1200px;
+      height: 85px;
+      background: lightcoral; }
+    .bottom div .pret02 {
+      width: 1200px;
+      height: 196px;
+      background: lightseagreen;
+      box-sizing: border-box;
+      padding: 30px 0 30px 0; }
+    .bottom div .pret03 {
+      width: 1200px;
+      height: 131px;
+      background: lime; }

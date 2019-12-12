@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册</title>
+</head>
+<link rel="stylesheet" href="./css/zhuce.css">
+<body>
+    <div class="nav">
+        <div>
+            <ul>
+                <li>紫一商城欢迎您!</li>
+                <li><img src="./img/phone.png"><a href="#">扫码关注公众号</a></li>
+            </ul>
+            <ol>
+                <li><a href="#">客服热线:</a></li>
+                <li><a class="phonenumber" href="#">400-189-1399</a></li>
+            </ol>
+        </div>
+    </div>
+    <div class="head">
+        <div>
+            <div class="head-left">
+                <a href="index.html"><img src="./img/logo.png"></a>
+                <h2>欢迎注册</h2>
+            </div>
+        </div>
+    </div>
+    <div class="banner">
+        <div>
+            <div class="login-box">
+                <h1>注册</h1>
+                <form>
+                    <div class="text">
+                        <input id="name" type="text" placeholder="请输入您的账号">
+                    </div>
+                    <div class="pwd">
+                        <input id="pass" type="password" placeholder="请输入您的密码">
+                    </div>
+                    <div class="sub">
+                        <input id="btn" type="button" value="注册">
+                    </div>
+                </form>
+                <span><a href="denglu.html">已拥有账号？点击此处登录</a></span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    var oName = document.getElementById('name');
+    var oPass = document.getElementById('pass');
+    var btn = document.getElementById('btn');
+    var arr = [];
+    btn.onclick=function(){
+	if (oName.value == "") {
+		alert('请输入用户名')
+		return
+	}
+	if (oPass.value == "") {
+		alert('请输入密码')
+		return
+	}
+	var json = JSON.parse(localStorage.getItem('list')||"[]")
+	console.log(json)
+	if (!json.length) {
+		var obj = {
+			name: oName.value,
+			password: oPass.value
+		}
+		arr.push(obj)
+		console.log(arr)
+		localStorage.setItem('list', JSON.stringify(arr))
+		oName.value = ''
+		oPass.value = ''
+		alert('恭喜你注册成功')
+		return
+	}
+	if (json.length) {
+		for (var i = 0; i < json.length; i++) {
+			if (json[i].name === oName.value) {
+				alert('该用户名已注册')
+				oName.value = ''
+				oPass.value = ''
+				return
+			}
+		}
+		var obj = {
+			name: oName.value,
+			password: oPass.value
+		}
+		json.push(obj)
+		localStorage.setItem('list', JSON.stringify(json))
+		oName.value = ''
+		oPass.value = ''
+		alert('恭喜你注册成功')
+		return
+	}
+}
+</script>

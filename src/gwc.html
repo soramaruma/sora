@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>购物车</title>
+</head>
+<link rel="stylesheet" href="./css/bootstrap.min.css">
+<style>
+    *{
+        margin: 0;padding: 0;
+    }
+    #box{
+        width: 1200px;
+        height: 600px;
+        margin: 0 auto;
+    }
+</style>
+<body>
+    <div id="box">
+    </div>
+</body>
+</html>
+<script>
+    var box = document.getElementById('box');
+    (function () {
+        var public = {
+            getStorage: function () {
+                return JSON.parse(localStorage.getItem('data') || '[]')
+            },
+            setStorage: function (json) {
+                localStorage.setItem('data', JSON.stringify(json))
+            },
+            applyCart: function (products, id) {
+                var pox = document.getElementById(id)
+                var str = ''
+                for (var i = 0; i < products.length; i++) {
+                    str += `<tr>
+                <td>${products[i].name}</td>
+                <td><img src="${products[i].pic}"/></td>
+                <td>${products[i].price}</td>
+                <td>${products[i].id}</td>
+                <td>
+                    <span class="minus btn-info btn-xs">-</span>
+                    <span class="num">${products[i].number}</span>
+                    <span class="plus btn-info btn-xs">+</span>
+                </td>
+                <td><a href="javascript:;" class="btn btn-info btnS">删除</a></td>                       
+                  </tr>`
+                }
+                pox.innerHTML = str;
+            }
+        }
+        if (public.getStorage().length) {
+           box.innerHTML = '<div class="col-md-6 col-md-offset-3 dd">' +
+                '<div id="car">'+
+                    '<table class="table">'+
+                        '<thead>'+
+                            '<th>商品名称</th>'+
+                            '<th>商品图片</th>'+
+                            '<th>价格</th>'+
+                            '<th>编号</th>'+
+                            '<th>数量</th>'+
+                            '<th>操作</th>'+
+                        '</thead>'+
+                        '<tbody id="tables">'+
+
+                        '</tbody>'+
+                    '</table>'+
+                '</div>'+
+                 '</div >'
+        }
+        public.applyCart(public.getStorage(), 'tables');
+    })()
+</script>

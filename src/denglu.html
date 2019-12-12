@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录</title>
+</head>
+<link rel="stylesheet" href="./css/denglu.css">
+<body>
+    <div class="nav">
+        <div>
+            <ul>
+                <li>紫一商城欢迎您!</li>
+                <li><img src="./img/phone.png"><a href="#">扫码关注公众号</a></li>
+            </ul>
+            <ol>
+                <li><a href="#">客服热线:</a></li>
+                <li><a class="phonenumber" href="#">400-189-1399</a></li>
+            </ol>
+        </div>
+    </div>
+    <div class="head">
+        <div>
+            <div class="head-left">
+                <a href="index.html"><img src="./img/logo.png"></a>
+                <h2>欢迎登录</h2>
+            </div>
+        </div>
+    </div>
+    <div class="banner">
+        <div>
+            <div class="login-box">
+                <h1>登录</h1>
+                <form>
+                    <div class="text">
+                        <input id="name" type="text" placeholder="请输入您的账号">
+                    </div>
+                    <div class="pwd">
+                        <input id="pass" type="password" placeholder="请输入您的密码">
+                    </div>
+                    <div class="sub">
+                        <input id="btn" type="button" value="登录">
+                    </div>
+                </form>
+                <span><a href="zhuce.html">未拥有账号？点击此处注册</a></span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    var oName = document.getElementById('name');
+    var oPass = document.getElementById('pass');
+    var btn = document.getElementById('btn');
+    var arr = [];
+    btn.onclick = function(){
+        if (oName.value == ""){
+                alert('请输入用户名')
+                return
+        }
+        if (oPass.value == ""){
+            alert('请输入密码')
+            return
+        }
+        var json = JSON.parse(localStorage.getItem('list')||"[]")
+        if (json.length) {
+            for (var i = 0; i < json.length; i++) {
+                if (json[i].name === oName.value && json[i].password === oPass.value) {
+                    alert('恭喜你登录成功')
+                    return
+                }
+            }
+            alert('用户名或密码错误')
+            oName.value = ''
+            oPass.value = ''
+            return
+        }
+        alert('该用户未注册,请先注册')
+}
+</script>
